@@ -46,6 +46,47 @@
                         Value="{Binding TrustPartySize}"  />
                 </Grid>
             </Expander>
+            <Expander Header="Notorious Monster Settings" Margin="0,2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Content="NM Mode Enabled" 
+                           Grid.Row="0" />
+
+                    <CheckBox Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="5 0 0 0"
+                            IsChecked="{Binding IsNMHunting}" />
+                    
+                    <Label Content="Placeholder ID" 
+                           Grid.Row="1" />
+                    <TextBox Grid.Row="1"
+                             Grid.Column="1"
+                             Margin="5 0 0 0"
+                             Text="{Binding PlaceholderID}" />
+
+                    <Label Content="Notorious Monster"
+                           Grid.Row="2" />
+                    <TextBox Grid.Row="2"
+                             Grid.Column="1"
+                             Margin="5 0 0 0"
+                             Text="{Binding NotoriousName}" />
+
+                </Grid>
+            </Expander>
             <Expander Header="Misc Settings" Margin="0,2">
                 <Grid>
                     <Grid.RowDefinitions>

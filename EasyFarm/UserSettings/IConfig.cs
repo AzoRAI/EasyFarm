@@ -37,5 +37,8 @@ namespace EasyFarm.UserSettings
         double FollowDistance { get; set; }
         string FollowedPlayer { get; set; }
         Route Route { get; set; }
+        int PlaceholderID { get; set; }
+        bool IsNMHunting { get; set; }
+        string NotoriousName { get; set; }
     }
 }

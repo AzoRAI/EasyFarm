@@ -38,5 +38,8 @@ namespace EasyFarm.Tests.TestTypes.Mocks
         public double FollowDistance { get; set; }
         public string FollowedPlayer { get; set; }
         public Route Route { get; set; } = new Route();
+        public int PlaceholderID { get; set; }
+        public bool IsNMHunting { get; set; }
+        public string NotoriousName { get; set; }
     }
 }

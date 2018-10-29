@@ -71,6 +71,13 @@ namespace EasyFarm.Classes
             // Type is not mob
             if (!mob.NpcType.Equals(NpcType.Mob)) return false;
 
+            if (config.IsNMHunting)
+            {
+                if (mob.Id == config.PlaceholderID || mob.Name == config.NotoriousName)
+                    return true;
+                else return false;
+            }
+
             // Mob is out of range
             if (!(mob.Distance < config.DetectionDistance)) return false;
 
@@ -84,6 +91,8 @@ namespace EasyFarm.Classes
 
             // Mob too high out of reach.
             if (mob.YDifference > config.HeightThreshold) return false;
+
+
 
             // User Specific Filtering
 
@@ -99,6 +108,12 @@ namespace EasyFarm.Classes
             if (!MatchAny(mob.Name, config.TargetedMobs, RegexOptions.IgnoreCase) &&
                 config.TargetedMobs.Any())
                 return false;
+
+            // If we're NM Hunting, don't attack unless it's a Placeholder or the NM
+            if (config.IsNMHunting && (mob.Id != config.PlaceholderID && mob.Name != config.NotoriousName))
+            {
+                return false;
+            }
 
             // Mob on our targets list or not on our ignore list.
 

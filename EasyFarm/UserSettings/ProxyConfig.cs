@@ -168,5 +168,23 @@ namespace EasyFarm.UserSettings
             get => Config.Instance.Route;
             set => Config.Instance.Route = value;
         }
+
+        public int PlaceholderID
+        {
+            get => Config.Instance.PlaceholderID;
+            set => Config.Instance.PlaceholderID = value;
+        }
+
+        public bool IsNMHunting
+        {
+            get => Config.Instance.IsNMHunting;
+            set => Config.Instance.IsNMHunting = value;
+        }
+
+        public string NotoriousName
+        {
+            get => Config.Instance.NotoriousName;
+            set => Config.Instance.NotoriousName = value;
+        }
     }
 }

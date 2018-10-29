@@ -146,6 +146,23 @@ namespace EasyFarm.UserSettings
         /// </summary>
         public double WanderDistance = Constants.DetectionDistance;
 
+
+        /// <summary>
+        ///     Placeholder ID of the mob
+        /// </summary>
+        public int PlaceholderID = 0;
+
+        /// <summary>
+        ///     Hunting an NM?
+        /// </summary>
+        public bool IsNMHunting = false;
+
+        /// <summary>
+        ///     Name of the NM you're hunting
+        /// </summary>
+        public string NotoriousName = "";
+
+
         static Config()
         {
             Instance.Initialize();

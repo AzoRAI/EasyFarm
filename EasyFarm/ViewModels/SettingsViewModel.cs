@@ -131,6 +131,34 @@ namespace EasyFarm.ViewModels
             }
         }
 
+        public int PlaceholderID
+        {
+            get { return Config.Instance.PlaceholderID; }
+            set
+            {
+                Set(ref Config.Instance.PlaceholderID, value);
+            }
+        }
+
+        public bool IsNMHunting
+        {
+            get { return Config.Instance.IsNMHunting; }
+            set
+            {
+                Set(ref Config.Instance.IsNMHunting, value);
+            }
+        }
+
+        public string NotoriousName
+        {
+            get { return Config.Instance.NotoriousName; }
+            set
+            {
+                Set(ref Config.Instance.NotoriousName, value);
+            }
+        }
+        
+
         private void RestoreDefaults()
         {
             DetectionDistance = Constants.DetectionDistance;
