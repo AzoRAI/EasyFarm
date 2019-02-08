@@ -75,7 +75,7 @@ namespace EasyFarm.Classes
             {
                 if (mob.Id == config.PlaceholderID || mob.Name == config.NotoriousName)
                     return true;
-                else return false;
+                else return mob.HasAggroed;
             }
 
             // Mob is out of range

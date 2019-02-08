@@ -59,7 +59,7 @@ namespace EasyFarm.States
 
         public override void Run()
         {
-            EliteApi.Navigator.DistanceTolerance = 1;
+            EliteApi.Navigator.DistanceTolerance = 3;
 
             var nextPosition = Config.Route.GetNextPosition(EliteApi.Player.Position);
             var shouldKeepRunningToNextWaypoint = Config.Route.Waypoints.Count != 1;
